@@ -26,15 +26,15 @@
     --Orangeyyellow: hsl(39, 100%, 56%);
     --Greenteal: hsl(166, 100%, 37%);
     --Cobaltblue: hsl(234, 85%, 45%);
-    --boxred: hsl(0, 100%, 86%);
-    --boxorange: hsl(39, 100%, 85%);
-    --boxgreen: hsl(167, 100%, 89%);
-    --boxblue: hsl(234, 100%, 85%);
+    --boxred: hsl(0, 100%, 94%);
+    --boxorange: hsl(38, 100%, 92%);
+    --boxgreen: hsl(167, 100%, 93%);
+    --boxblue: hsl(233, 100%, 91%);
     --Violetblue-circle: #4e21ca;
     --Persianblue-circle: #2421ca00;
     --White: hsl(0, 0%, 100%);
     --Paleblue: hsl(221, 100%, 96%);
-    --Lightlavender: hsl(241, 100%, 89%);
+    --Lightlavender: hsla(241, 100%, 89%, 0.568);
     --Darkgrayblue: hsl(224, 30%, 27%);
     --Lightslateblue: #7857ff;
     --Lightroyalblue: #2e2be9;
@@ -46,148 +46,169 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body{
-    max-width: 1440px;
-    background-color: var(--White);
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
-    width: 100%;
-    height: 100%; 
+    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.purple, .white{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding: 30px 30px;
 }
 
 .purple{
-    background: rgb(46,43,233);
-    background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 100%);
-    border-radius: 0 0 30px 30px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--Lightroyalblue);
 }
 
-.purple h4{
-    font-family: Bold;
+.purple h3{
+    font-family: Medium;
     font-size: 1.25rem;
-    color: var(--Lightlavender); 
-    margin-bottom: 25px;
+    color: var(--Lightlavender);
+    margin-bottom: 35px;
+}
+
+.purple .circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(#4e21ca, #2421ca00);
+    box-shadow: rgba(66, 66, 66, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.purple .circle h1{
+    color: white;
+    font-family: ExtraBold;
+    font-size: 3rem;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.150);
+    padding-top: 20px;
+}
+
+.purple .circle p{
+    color: var(--Lightlavender);
+    font-family: bold;
+    font-size: .75rem;
+    padding-top: 10px;
 }
 
 .purple h2{
-    color: var(--White);
+    color: white;
     font-family: Bold;
     margin-bottom: 10px;
 }
 
 .purple p{
+    text-align: center;
     font-family: Bold;
-    font-size: 1rem;
-    color: var(--Lightlavender); 
-    width: 80%;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    color: var(--Lightlavender);
+    padding: 5px 25px;
+    
 }
 
-.circle{
-    background: #4835F1;
-    background: linear-gradient(0deg, #4835F1 0%, #4F24CB 100%);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-.circle h1{
-    color: var(--White);
-    font-family: ExtraBold;
-    font-size: 4rem;
-}
-
-.circle p{
-    font-family: Bold;
-    font-size: 1rem;
-    color: var(--Lightlavender); 
-}
 
 .white{
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: start;
+    gap: 15px;
 }
 
 .white h3{
     font-family: Bold;
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: black;
+    margin-bottom: 20px;
 }
 
 .white .box{
-    width: 100%;
-    height: 50px;
-    background-color: aqua;
+    height: 40px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding-inline: 15px;
+    width: 100%;
 }
 
-#reaction{
-    background-color: #FFF7F7;
-    color: var(--Lightred);
-}
-
-#memory{
-    background-color: #FFFCF1;
-    color: var(--Orangeyyellow);
-}
-
-#verbal{
-    background-color: #F2FBFA;
-    color: var(--Greenteal);
-}
-
-#visual{
-    background-color: #F3F3FF;
-    color: var(--Lightroyalblue);
-}
-
-.white .box .text{
+.white .text{
     display: flex;
     align-items: center;
     gap: 5px;
     font-family: Bold;
 }
 
-.white .box .number{
+.white #red{
+    background-color: var(--boxred);
+}
+
+#red .text{
+    color: var(--Lightred);
+}
+
+.white #yellow{
+    background-color: var(--boxorange);
+}
+
+#yellow .text{
+    color: var(--Orangeyyellow);
+}
+
+.white #green{
+    background-color: var(--boxgreen);
+}
+
+#green .text{
+    color: var(--Greenteal);
+}
+
+.white #blue{
+    background-color: var(--boxblue);
+}
+
+#blue .text{
+    color: var(--Cobaltblue);
+}
+
+.white .number{
+    font-family: Medium;
     display: flex;
     align-items: center;
-    font-family: Bold;
-    color: rgb(117, 117, 117);
 }
 
-.white .box .number strong{
-    color: black;
-}
-
-button{
+.white button{
     width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    background-color: var(--Darkgrayblue);
-    color: white;
-    font-family: Bold;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
     border: none;
-    margin-top: 15px;
+    background-color: var(--Darkgrayblue);
+    font-family: Bold;
+    font: 1.25rem;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-
