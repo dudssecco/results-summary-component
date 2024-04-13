@@ -64,7 +64,7 @@ body{
     border-radius: 30px;
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 30px;
 }
 
 .purple, .white{
@@ -211,4 +211,24 @@ body{
     font: 1.25rem;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (max-width: 650px) {
+
+    body{
+        height: auto;
+    }
+    
+    .container{
+        flex-direction: column;
+    }
+
+    .purple, .white{
+        width: 100%;
+    }
+
+    .purple{
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.600)
+    }
+
 }
